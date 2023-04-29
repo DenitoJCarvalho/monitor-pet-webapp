@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --orange: rgba(246, 186, 111, 1);
+  --blue: rgba(109, 169, 228, 1);
+  --light-blue: rgba(173, 228, 219, 1);
+  --light-pink: rgba(255, 235, 235, 1);
+  --ice: rgba(229, 226, 222, 1);
+
+  --comic-neue: 'Comic Neue', cursive;
+  --roboto: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--comic-neue), var(--roboto);
+}
+
+html,
+body {
+  width: 100vw;
+}
+
+img {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+}
+
+h1 {
+  font-weight: 700;
+}
