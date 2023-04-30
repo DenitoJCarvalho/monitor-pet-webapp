@@ -9,6 +9,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   form!: FormGroup;
+  msg: string[] = [];
 
 
   constructor(
@@ -23,7 +24,32 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form.value);
+    console.log(this.form.value.password);
+    this.verifyNullPassword(this.form.value.password);
+    this.verifySizePassword(this.form.value.password);
+    this.form.reset();
+  }
+
+  verifyEmail() { }
+
+  verifySizePassword(value: string) {
+    if (value.length < 5) {
+      this.msg.push('Senha é menor que 4 caracteres.');
+    }
+    this.clearMsg();
+  }
+
+  verifyNullPassword(value: string) {
+    if (value === null) {
+      this.msg.push('Senha não pode ser nula.');
+    }
+    this.clearMsg();
+  }
+
+  clearMsg() {
+    setTimeout(() => {
+      this.msg.pop();
+    }, 3000)
   }
 
 }

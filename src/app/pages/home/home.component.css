@@ -72,6 +72,10 @@
   text-decoration: none;
 }
 
+.error {
+  color: var(--error);
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   :is(.container-home, .login-form) {
     display: flex;
