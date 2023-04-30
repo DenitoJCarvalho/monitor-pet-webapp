@@ -4,6 +4,7 @@
   --light-blue: rgba(173, 228, 219, 1);
   --light-pink: rgba(255, 235, 235, 1);
   --ice: rgba(229, 226, 222, 1);
+  --gray: rgba(204, 213, 174, 1);
 
   --comic-neue: 'Comic Neue', cursive;
   --roboto: 'Roboto', sans-serif;
@@ -30,4 +31,14 @@ img {
 
 h1 {
   font-weight: 700;
+}
+
+:is(button, a) {
+  cursor: pointer;
+}
+
+
+
+input:where([type='submit'], [type='reset']) {
+  cursor: pointer;
 }

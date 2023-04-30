@@ -1,17 +1,31 @@
-<nav class="navbar">
-  <div class="profile">
-    <ul>
-      <div>
-        <img src="" alt="perfil">
-        <p class="perfil-name">Usuário</p>
-      </div>
-      <li><a href="">Dados pessoais</a></li>
-      <li><a href="">sair</a></li>
-    </ul>
-    <ul class="menu">
-      <li><a href="">menu-1</a></li>
-      <li><a href="">menu-2</a></li>
-      <li><a href="">menu-3</a></li>
-    </ul>
+<section class="container-home">
+  <div class="img-hero"></div>
+  <div class="login-form">
+    <form action="" method="" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <fieldset class="container-field">
+        <label for="">Email</label>
+        <br>
+        <input type="text" class="field-entry" id="email" formControlName="email" placeholder="email@email.com.br"
+          autocomplete="off" tabindex="1" required />
+        <br>
+        <small class="msg"></small>
+      </fieldset>
+      <fieldset class="container-field">
+        <label for="password">Senha</label>
+        <br>
+        <input type="password" class="field-entry" id="password" formControlName="password" placeholder="Senha"
+          minlength="6" autocomplete="off" tabindex="2" required />
+        <br>
+        <small class="msg"></small>
+      </fieldset>
+      <fieldset class="container-field">
+        <input type="submit" id="entry" name="entry" class="btn" value="Entrar" tabIndex="3" />
+        <input type="reset" id="clear" name="clear" class="btn" value="limpar" tabIndex="3" />
+      </fieldset>
+      <fieldset class="container-field">
+        <a href="" class="link">Cadastrar</a>
+        <a href="" class="link forget">Esqueci Senha</a>
+      </fieldset>
+    </form>
   </div>
-</nav>
+</section>
