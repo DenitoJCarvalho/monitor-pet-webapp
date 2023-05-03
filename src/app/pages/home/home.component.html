@@ -4,33 +4,35 @@
 
   <div class="login-form">
 
-    <form action="" method="" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
       <fieldset class="container-field">
         <label for="">Email</label>
         <br>
-        <input type="text" class="field-entry" id="email" formControlName="email" placeholder="email@email.com.br"
+        <input type="text" class="field-entry" formControlName="email" placeholder="email@email.com.br"
           autocomplete="off" tabindex="1" required />
         <br>
-        <small class="msg"></small>
       </fieldset>
 
       <fieldset class="container-field">
         <label for="password">Senha</label>
         <br>
-        <input type="password" class="field-entry" id="password" formControlName="password" placeholder="Senha"
-          autocomplete="off" tabindex="2" required />
+        <input type="password" class="field-entry" formControlName="password" placeholder="Senha" autocomplete="off"
+          tabindex="2" required />
         <br>
-        <small class="error" *ngFor="let item of msg">{{ item }}</small>
       </fieldset>
 
       <fieldset class="container-field">
-        <button type="submit" id="entry" name="entry" class="btn" value="Entrar" tabIndex="3">Entrar</button>
+        <button type="submit" class="btn" value="Entrar" tabIndex="3">Entrar</button>
       </fieldset>
 
       <fieldset class="container-field">
         <a href="" class="link">Cadastrar</a>
         <a href="" class="link forget">Esqueci Senha</a>
+      </fieldset>
+
+      <fieldset class="container-field">
+        <small class="error">{{ error }}<br></small>
       </fieldset>
 
     </form>
