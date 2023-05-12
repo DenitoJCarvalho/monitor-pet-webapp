@@ -1,7 +1,7 @@
 export type loginModel = {
   user: [
     {
-      id: string,
+      _id: string,
       name: string;
       password: string,
       email: string,

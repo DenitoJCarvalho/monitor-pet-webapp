@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { loginModel } from '../../models/loginModel';
 
 import { LoginService } from '../../services/login.service';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -41,8 +41,12 @@ export class HomeComponent implements OnInit {
     let password = this.form.value.password;
     this.service.getUser(email).subscribe({
       next: (res) => {
-        if (res.user[0].email === email && res.user[0].password === password) {
-          this.entryInPage();
+        let userId = res.user[0]._id;
+        let userEmail = res.user[0].email;
+        let userPassword = res.user[0].password;
+
+        if (userEmail === email && userPassword === password) {
+          this.goToPage(userId);
           this.logon = true;
         }
       },
@@ -52,8 +56,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  private entryInPage() {
-    return this.router.navigate(['dashboard'])
+  private goToPage(id: string) {
+    return this.router.navigate([`dashboard/${id}`])
   }
 
 }

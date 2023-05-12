@@ -1,0 +1,131 @@
+.navbar {
+  border-bottom: 1px solid var(--gray-to-input);
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+  box-shadow: 0 0.0225rem 0.0625rem 0.0225rem var(--gray-to-input);
+}
+
+:is(.navbar, .nav-list) {
+  padding: 0.25rem 0.75rem;
+}
+
+:is(.nav-brand, .nav-list>li) {
+  padding: 0.25rem 0.25rem;
+}
+
+.nav-brand {
+  width: 3rem;
+  height: 2.625rem;
+}
+
+.nav-name {
+  width: 60%;
+  padding-left: 0.5rem;
+  margin: 0 1.25rem 0 0.5rem;
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.nav-menu-hamburguer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.nav-list:where(li, a) {
+  background-color: transparent;
+}
+
+.nav-list li {
+  border-bottom: 1px solid var(--gray-to-input);
+  padding: 0.5rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.nav-list li a:active {
+  color: var(--light-blue);
+}
+
+:is(.is-admin, .is-user) {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.is-admin {
+  color: var(--green);
+}
+
+.is-user {
+  color: var(--blue);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  :is(.navbar, .nav-list) {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .nav-list li a::before {
+    content: '\2023';
+    margin-right: 0.5rem;
+  }
+
+  .nav-list li a:active {
+    color: var(--light-blue);
+  }
+
+  .nav-name {
+    margin-left: 1rem;
+    margin-right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :is(.navbar, .nav-list) {
+    width: 100%;
+    padding-left: 13.75rem;
+    padding-right: 13.75rem;
+  }
+
+  .nav-list li {
+    border-bottom: none;
+  }
+
+  .nav-list li a:hover::before {
+    content: '\2023';
+    margin-right: 0.5rem;
+    color: var(--blue);
+    zoom: 1.2;
+  }
+
+  .nav-list li a:hover {
+    color: var(--light-blue);
+  }
+
+  .nav-name {
+    width: 90%;
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .nav-menu-hamburguer {
+    cursor: pointer;
+  }
+}

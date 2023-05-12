@@ -1,17 +1,26 @@
 <nav class="navbar">
-  <div class="brand">
-    <img src="" alt="logo">
+  <div class="nav-brand">
+    <img src="assets/monitor-pet.svg" alt="logo">
   </div>
 
-  <div class="profile-name">
-    <p></p>
+  <div class="nav-name">
+    <p hidden>{{ id }}</p>
+    <p>{{ name }} -
+      <strong [ngClass]="profile === 'admin' ? 'is-admin' : 'is-user'">{{ profile }}</strong>
+    </p>
   </div>
 
-  <div>
-    <ul class="menu">
-      <li><a href="">menu-1</a></li>
-      <li><a href="">menu-2</a></li>
-      <li><a href="">menu-3</a></li>
-    </ul>
+  <div class="nav-menu-hamburguer" (click)="toogleMenulist()">
+    <span class="material-icons menu-burguer">
+      menu
+    </span>
   </div>
 </nav>
+<div>
+  <ul class="nav-list" *ngIf="isMenulist">
+    <li><a [href]="linkMenu1">Dados</a></li>
+    <li><a [href]="linkMenu2">Cadastrar pet</a></li>
+    <li><a [href]="linkMenu3">Cadastrar pulseira</a></li>
+    <li><a [routerLink]="['']">Sair</a></li>
+  </ul>
+</div>
