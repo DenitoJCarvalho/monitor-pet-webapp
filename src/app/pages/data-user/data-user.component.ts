@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { LoginService } from '../../services/login.service';
+import { PageService } from '../../services/page.service';
+import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-data-user',
@@ -13,16 +15,19 @@ export class DataUserComponent implements OnInit {
   userId: string = '';
   userName: string = '';
   userProfile: string = '';
+  link1: string = '';
 
 
   constructor(
     private route: ActivatedRoute,
-    private LoginService: LoginService
+    private LoginService: LoginService,
+    private pageService: PageService
   ) { }
 
   ngOnInit(): void {
     this.getUserId();
     this.getUserDataById();
+    this.link1 = this.pageService.goToPage(`userData`, this.getUserId());
   }
 
   getUserDataById() {

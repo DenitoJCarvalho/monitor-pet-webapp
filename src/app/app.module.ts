@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DataUserComponent } from './pages/data-user/data-user.component';
+import { UserDataComponent } from './components/user-data/user-data.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DataUserComponent } from './pages/data-user/data-user.component';
     HomeComponent,
     NavbarComponent,
     DashboardComponent,
-    DataUserComponent
+    DataUserComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,

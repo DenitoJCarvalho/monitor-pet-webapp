@@ -1,10 +1,6 @@
-<app-navbar [id]="userId" [name]="userName" [profile]="userProfile"></app-navbar>
-<section class="container-datauser">
-  <form action="" class="form-datauser">
-    <fieldset>
-      <label for="name">Nome</label>
-      <br>
-      <input type="text" readonly />
-    </fieldset>
-  </form>
+<app-navbar [id]="userId" [name]="userName" [profile]="userProfile" [linkMenu1]="link1"></app-navbar>
+
+<section class="container-data-user">
+  <h2 class="data-user-title">Dados do usuário</h2>
+  <app-user-data [userName]="userName"></app-user-data>
 </section>
