@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DataUserComponent } from './pages/data-user/data-user.component';
 import { UserDataComponent } from './components/user-data/user-data.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserDataComponent } from './components/user-data/user-data.component';
     NavbarComponent,
     DashboardComponent,
     DataUserComponent,
-    UserDataComponent
+    UserDataComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

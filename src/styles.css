@@ -52,3 +52,7 @@ input:where([type='submit'], [type='reset']) {
 input:focus {
   background-color: var(--light-blue);
 }
+
+.clr-orange {
+  color: var(--orange);
+}
