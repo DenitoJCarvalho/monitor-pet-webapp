@@ -38,14 +38,19 @@
 @media screen and (min-width: 48rem) {
   .menu-list {
     padding-left: 1.25rem;
+    display: inline-flex;
+
+    & li {
+      width: 50% !important;
+    }
   }
 }
 
 /* 1024px */
 @media screen and (min-width: 64rem) {
   .container-menu {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
   }
 
   .menu-list {

@@ -12,6 +12,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DataUserComponent } from './pages/data-user/data-user.component';
 import { UserDataComponent } from './components/user-data/user-data.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CardListPetComponent } from './components/card-list-pet/card-list-pet.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MenuComponent } from './components/menu/menu.component';
     DashboardComponent,
     DataUserComponent,
     UserDataComponent,
-    MenuComponent
+    MenuComponent,
+    CardListPetComponent
   ],
   imports: [
     BrowserModule,

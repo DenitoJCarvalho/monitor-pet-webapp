@@ -56,3 +56,23 @@ input:focus {
 .clr-orange {
   color: var(--orange);
 }
+
+.clr-red {
+  color: var(--error)
+}
+
+.clr-green {
+  color: var(--green)
+}
+
+.clr-blue {
+  color: var(--blue);
+}
+
+.clr-ice {
+  color: var(--ice);
+}
+
+.bg-ice {
+  background-color: var(--ice);
+}

@@ -78,7 +78,7 @@
 }
 
 /* 425px */
-@media screen and (min-width: 26.56rem) {
+@media screen and (min-width: 26rem) {
   .navbar {
     padding: 0.5rem 0.75rem 0.5rem 1rem;
   }
@@ -115,8 +115,8 @@
 @media screen and (min-width: 64rem) {
   :is(.navbar, .nav-list) {
     width: 100%;
-    padding-left: 10.5rem;
-    padding-right: 10.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .nav-list li {
